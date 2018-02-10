@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back"
+        />
+
+    <!--top team-->
+    <LinearLayout
+        android:id="@+id/top_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        >
+        <!--team name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Team"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:fontFamily="casual"
+            />
+        <!--Score display-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <!--Kills-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--increase-->
+                <!--Can use tag to pass arguments-->
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+1 Kill"
+                    android:textColor="@color/kill"
+                    android:background="@drawable/custom_button_killop"
+                    android:tag="kill,top,+"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    />
+                <TextView
+                    android:id="@+id/top_kill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/killop"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+
+                <!--decrease-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="-1 Kill"
+                    android:textColor="@color/killop"
+                    android:background="@drawable/custom_button_kill"
+                    android:tag="kill,top,-"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    />
+            </LinearLayout>
+
+            <!--separator-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                android:text="/"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="casual"
+                android:includeFontPadding="false"
+                />
+
+
+            <!--Deaths-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--increase-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+1 Death"
+                    android:textColor="@color/death"
+                    android:background="@drawable/custom_button_deathop"
+                    android:tag="death,top,+"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/top_death"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+
+                <!--decrease-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="-1 Death"
+                    android:textColor="@color/deathop"
+                    android:background="@drawable/custom_button_death"
+                    android:tag="death,top,-"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+            </LinearLayout>
+            <!--separator-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                android:text="/"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="casual"
+                android:includeFontPadding="false"
+                />
+
+            <!--Assists-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--increase-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+1 Assist"
+                    android:textColor="@color/assist"
+                    android:background="@drawable/custom_button_assistop"
+                    android:tag="assist,top,+"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/top_assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+
+                <!--decrease-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="-1 Assist"
+                    android:textColor="@color/assistop"
+                    android:background="@drawable/custom_button_assist"
+                    android:tag="assist,top,-"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--bottom team-->
+    <LinearLayout
+        android:id="@+id/bot_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        >
+
+        <!--Score display-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <!--Kills-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--increase-->
+                <!--Can use tag to pass arguments-->
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+1 Kill"
+                    android:textColor="@color/kill"
+                    android:background="@drawable/custom_button_killop"
+                    android:tag="kill,bot,+"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/bot_kill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/killop"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+
+                <!--decrease-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="-1 Kill"
+                    android:textColor="@color/killop"
+                    android:background="@drawable/custom_button_kill"
+                    android:tag="kill,bot,-"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+            </LinearLayout>
+
+            <!--separator-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                android:text="/"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="casual"
+                android:includeFontPadding="false"
+                />
+
+
+            <!--Deaths-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--increase-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+1 Death"
+                    android:textColor="@color/death"
+                    android:background="@drawable/custom_button_deathop"
+                    android:tag="death,bot,+"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/bot_death"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+
+                <!--decrease-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="-1 Death"
+                    android:textColor="@color/deathop"
+                    android:background="@drawable/custom_button_death"
+                    android:tag="death,bot,-"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+            </LinearLayout>
+            <!--separator-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                android:text="/"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="casual"
+                android:includeFontPadding="false"
+                />
+
+            <!--Assists-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--increase-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+1 Assist"
+                    android:textColor="@color/assist"
+                    android:background="@drawable/custom_button_assistop"
+                    android:tag="assist,bot,+"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/bot_assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+
+                <!--decrease-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="-1 Assist"
+                    android:textColor="@color/assistop"
+                    android:background="@drawable/custom_button_assist"
+                    android:tag="assist,bot,-"
+                    android:onClick="change_score"
+                    android:fontFamily="casual"
+                    android:includeFontPadding="false"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom Team"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:fontFamily="casual"
+            android:includeFontPadding="false"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="Reset"
+            android:onClick="reset"
+            android:fontFamily="casual"
+            android:includeFontPadding="false"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
