@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         focusArray[index] += multiplier;
         if(focusArray[index]<0) focusArray[index] = 0;
-        this.show_scores();
+        show_scores();
     }
 
 //    shows scores using data arrays
@@ -73,6 +73,6 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View v){
         topScores = new int[]{0,0,0};
         botScores = new int[]{0,0,0};
-        this.show_scores();
+        show_scores();
     }
 }
