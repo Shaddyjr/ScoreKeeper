@@ -5,196 +5,79 @@
     android:layout_height="match_parent"
     >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/back"
-        />
+    <ImageView style="@style/img_background"/>
 
     <!--top team-->
     <LinearLayout
+        style="@style/team_container.top"
         android:id="@+id/top_team"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical"
         >
         <!--team name-->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Top Team"
-            android:textColor="#ffffff"
-            android:layout_gravity="center_horizontal"
-            android:textSize="30sp"
-            android:fontFamily="casual"
+            style="@style/team_name"
+            android:text="@string/top"
             />
         <!--Score display-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            >
-
+        <LinearLayout style="@style/score_container">
             <!--Kills-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-
+            <LinearLayout style="@style/stat_container">
                 <!--increase-->
-                <!--Can use tag to pass arguments-->
-
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="+1 Kill"
-                    android:textColor="@color/kill"
-                    android:background="@drawable/custom_button_killop"
+                    style="@style/basic_button.kill_button.pos"
                     android:tag="kill,top,+"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
                     />
                 <TextView
+                    style="@style/counter_text"
                     android:id="@+id/top_kill"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/killop"
-                    android:textSize="40sp"
-                    android:text="0"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
-
                 <!--decrease-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="-1 Kill"
-                    android:textColor="@color/killop"
-                    android:background="@drawable/custom_button_kill"
+                    style="@style/basic_button.kill_button.neg"
                     android:tag="kill,top,-"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
                     />
             </LinearLayout>
 
             <!--separator-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="40sp"
-                android:text="/"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="casual"
-                android:includeFontPadding="false"
-                />
-
+            <TextView style="@style/sep"/>
 
             <!--Deaths-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+            <LinearLayout style="@style/stat_container">
 
                 <!--increase-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="+1 Death"
-                    android:textColor="@color/death"
-                    android:background="@drawable/custom_button_deathop"
+                    style="@style/basic_button.death_button.pos"
                     android:tag="death,top,+"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
                 <TextView
+                    style="@style/counter_text"
                     android:id="@+id/top_death"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="40sp"
-                    android:text="0"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
 
                 <!--decrease-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="-1 Death"
-                    android:textColor="@color/deathop"
-                    android:background="@drawable/custom_button_death"
+                    style="@style/basic_button.death_button.neg"
                     android:tag="death,top,-"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
             </LinearLayout>
             <!--separator-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="40sp"
-                android:text="/"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="casual"
-                android:includeFontPadding="false"
-                />
+            <TextView style="@style/sep"/>
 
             <!--Assists-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+            <LinearLayout style="@style/stat_container">
 
                 <!--increase-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="+1 Assist"
-                    android:textColor="@color/assist"
-                    android:background="@drawable/custom_button_assistop"
+                    style="@style/basic_button.assist_button.pos"
                     android:tag="assist,top,+"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
                 <TextView
+                    style="@style/counter_text"
                     android:id="@+id/top_assist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="40sp"
-                    android:text="0"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
-
                 <!--decrease-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="-1 Assist"
-                    android:textColor="@color/assistop"
-                    android:background="@drawable/custom_button_assist"
+                    style="@style/basic_button.assist_button.neg"
                     android:tag="assist,top,-"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -203,205 +86,79 @@
 
     <!--bottom team-->
     <LinearLayout
-        android:id="@+id/bot_team"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical"
+        style="@style/team_container.bottom"
+        android:id="@+id/bottom_team"
         >
-
+        <!--team name-->
+        <TextView
+            style="@style/team_name"
+            android:text="@string/bottom"
+            />
         <!--Score display-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            >
-
+        <LinearLayout style="@style/score_container">
             <!--Kills-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-
+            <LinearLayout style="@style/stat_container">
                 <!--increase-->
-                <!--Can use tag to pass arguments-->
-
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="+1 Kill"
-                    android:textColor="@color/kill"
-                    android:background="@drawable/custom_button_killop"
-                    android:tag="kill,bot,+"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/basic_button.kill_button.pos"
+                    android:tag="kill,bottom,+"
                     />
                 <TextView
-                    android:id="@+id/bot_kill"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/killop"
-                    android:textSize="40sp"
-                    android:text="0"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/counter_text"
+                    android:id="@+id/bottom_kill"
                     />
-
                 <!--decrease-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="-1 Kill"
-                    android:textColor="@color/killop"
-                    android:background="@drawable/custom_button_kill"
-                    android:tag="kill,bot,-"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/basic_button.kill_button.neg"
+                    android:tag="kill,bottom,-"
                     />
             </LinearLayout>
 
             <!--separator-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="40sp"
-                android:text="/"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="casual"
-                android:includeFontPadding="false"
-                />
-
+            <TextView style="@style/sep"/>
 
             <!--Deaths-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+            <LinearLayout style="@style/stat_container">
 
                 <!--increase-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="+1 Death"
-                    android:textColor="@color/death"
-                    android:background="@drawable/custom_button_deathop"
-                    android:tag="death,bot,+"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/basic_button.death_button.pos"
+                    android:tag="death,bottom,+"
                     />
                 <TextView
-                    android:id="@+id/bot_death"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="40sp"
-                    android:text="0"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/counter_text"
+                    android:id="@+id/bottom_death"
                     />
 
                 <!--decrease-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="-1 Death"
-                    android:textColor="@color/deathop"
-                    android:background="@drawable/custom_button_death"
-                    android:tag="death,bot,-"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/basic_button.death_button.neg"
+                    android:tag="death,bottom,-"
                     />
             </LinearLayout>
             <!--separator-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="40sp"
-                android:text="/"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="casual"
-                android:includeFontPadding="false"
-                />
+            <TextView style="@style/sep"/>
 
             <!--Assists-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+            <LinearLayout style="@style/stat_container">
 
                 <!--increase-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="+1 Assist"
-                    android:textColor="@color/assist"
-                    android:background="@drawable/custom_button_assistop"
-                    android:tag="assist,bot,+"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/basic_button.assist_button.pos"
+                    android:tag="assist,bottom,+"
                     />
                 <TextView
-                    android:id="@+id/bot_assist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="40sp"
-                    android:text="0"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/counter_text"
+                    android:id="@+id/bottom_assist"
                     />
-
                 <!--decrease-->
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="-1 Assist"
-                    android:textColor="@color/assistop"
-                    android:background="@drawable/custom_button_assist"
-                    android:tag="assist,bot,-"
-                    android:onClick="change_score"
-                    android:fontFamily="casual"
-                    android:includeFontPadding="false"
+                    style="@style/basic_button.assist_button.neg"
+                    android:tag="assist,bottom,-"
                     />
             </LinearLayout>
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bottom Team"
-            android:textColor="#ffffff"
-            android:layout_gravity="center_horizontal"
-            android:textSize="30sp"
-            android:fontFamily="casual"
-            android:includeFontPadding="false"
-            />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:text="Reset"
-            android:onClick="reset"
-            android:fontFamily="casual"
-            android:includeFontPadding="false"
-            />
-
+        <Button style="@style/reset_button" />
     </LinearLayout>
-
 </RelativeLayout>

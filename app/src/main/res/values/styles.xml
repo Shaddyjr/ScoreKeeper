@@ -7,4 +7,138 @@
         <item name="colorPrimaryDark">#5e35b1</item>
         <item name="colorAccent">#e64a19</item>
     </style>
+
+    <style name="team_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">casual</item>
+    </style>
+
+    <style name="img_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/back</item>
+        <item name="android:contentDescription">@string/img_desc</item>
+    </style>
+
+    <style name="team_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="team_container.top">
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="team_container.bottom">
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+
+    <style name="score_container">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="counter_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:text">@string/starting_val</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="basic_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:onClick">change_score</item>
+        <item name="android:fontFamily">casual</item>
+    </style>
+
+    <!--start of stats-->
+    <!--kill-->
+    <style name="basic_button.kill_button">
+        <item name="android:textColor">@color/kill</item>
+        <item name="android:background">@drawable/custom_button_killop</item>
+    </style>
+
+    <style name="basic_button.kill_button.pos">
+        <item name="android:text">@string/kill_pos</item>
+    </style>
+
+    <style name="basic_button.kill_button.neg">
+        <item name="android:text">@string/kill_neg</item>
+    </style>
+
+    <!--death-->
+    <style name="basic_button.death_button">
+        <item name="android:textColor">@color/death</item>
+        <item name="android:background">@drawable/custom_button_deathop</item>
+    </style>
+
+    <style name="basic_button.death_button.pos">
+        <item name="android:text">@string/death_pos</item>
+    </style>
+
+    <style name="basic_button.death_button.neg">
+        <item name="android:text">@string/death_neg</item>
+    </style>
+
+    <!--assist-->
+    <style name="basic_button.assist_button">
+        <item name="android:textColor">@color/assist</item>
+        <item name="android:background">@drawable/custom_button_assistop</item>
+
+    </style>
+
+    <style name="basic_button.assist_button.pos">
+        <item name="android:text">@string/assist_pos</item>
+    </style>
+
+    <style name="basic_button.assist_button.neg">
+        <item name="android:text">@string/assist_neg</item>
+    </style>
+
+    <!--end of stats-->
+    <style name="sep">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:text">@string/sep</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="stat_container">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+
+
+    <style name="reset_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:text">@string/reset</item>
+        <item name="android:onClick">reset</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
 </resources>

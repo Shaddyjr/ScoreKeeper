@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+
+    <string name="top">Top Team</string>
+    <string name="bottom">Bottom Team</string>
+
+    <string name="img_desc">League of Legends name as background</string>
+
+    <string name="sep">/</string>
+
+    <string name="kill_pos">+1 Kill</string>
+    <string name="death_pos">+1 Death</string>
+    <string name="assist_pos">+1 Assist</string>
+    <string name="kill_neg">-1 Kill</string>
+    <string name="death_neg">-1 Death</string>
+    <string name="assist_neg">-1 Assist</string>
+    <string name="starting_val">0</string>
+
+    <string name="reset">Reset</string>
 </resources>

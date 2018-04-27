@@ -9,18 +9,29 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView top_kill,top_death,top_assist,bot_kill,bot_death,bot_assist;
+    int[] topScores;
+    int[] botScores;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        top_kill = findViewById(R.id.top_kill);
+        top_death = findViewById(R.id.top_death);
+        top_assist = findViewById(R.id.top_assist);
+        bot_kill = findViewById(R.id.bottom_kill);
+        bot_death = findViewById(R.id.bottom_death);
+        bot_assist = findViewById(R.id.bottom_assist);
+
+        resetScores();
     }
 
-    int[] topScores = {0,0,0};
-    int[] botScores = {0,0,0};
     public void change_score(View v) {
         String tag = v.getTag().toString();
         String[] data = tag.split(",");
-        this.show_change(data);
+        show_change(data);
     }
 
     public void show_change(String[] args){
@@ -51,28 +62,21 @@ public class MainActivity extends AppCompatActivity {
 
 //    shows scores using data arrays
     public void show_scores(){
-        TextView top_kill = findViewById(R.id.top_kill);
         top_kill.setText(String.valueOf(topScores[0]));
-
-        TextView top_death = findViewById(R.id.top_death);
         top_death.setText(String.valueOf(topScores[1]));
-
-        TextView top_assist = findViewById(R.id.top_assist);
         top_assist.setText(String.valueOf(topScores[2]));
-
-        TextView bot_kill = findViewById(R.id.bot_kill);
         bot_kill.setText(String.valueOf(botScores[0]));
-
-        TextView bot_death = findViewById(R.id.bot_death);
         bot_death.setText(String.valueOf(botScores[1]));
-
-        TextView bot_assist = findViewById(R.id.bot_assist);
         bot_assist.setText(String.valueOf(botScores[2]));
     }
 
-    public void reset(View v){
+    public void resetScores(){
         topScores = new int[]{0,0,0};
         botScores = new int[]{0,0,0};
+    }
+
+    public void reset(View v){
+        resetScores();
         show_scores();
     }
 }
