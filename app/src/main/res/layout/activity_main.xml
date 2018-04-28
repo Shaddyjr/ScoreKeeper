@@ -1,164 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <ImageView style="@style/img_background"/>
+    <ImageView style="@style/img_background" />
 
-    <!--top team-->
     <LinearLayout
-        style="@style/team_container.top"
-        android:id="@+id/top_team"
+        style="@style/teams_container"
         >
-        <!--team name-->
-        <TextView
-            style="@style/team_name"
-            android:text="@string/top"
-            />
-        <!--Score display-->
-        <LinearLayout style="@style/score_container">
-            <!--Kills-->
-            <LinearLayout style="@style/stat_container">
-                <!--increase-->
-                <Button
-                    style="@style/basic_button.kill_button.pos"
-                    android:tag="kill,top,+"
-                    />
-                <TextView
-                    style="@style/counter_text"
-                    android:id="@+id/top_kill"
-                    />
-                <!--decrease-->
-                <Button
-                    style="@style/basic_button.kill_button.neg"
-                    android:tag="kill,top,-"
-                    />
+        <!--top team-->
+        <LinearLayout
+            android:id="@+id/top_team"
+            style="@style/team_container.top">
+            <!--team name-->
+            <TextView
+                style="@style/team_name"
+                android:text="@string/top" />
+            <!--Score display-->
+            <LinearLayout style="@style/score_container">
+                <!--Kills-->
+                <LinearLayout style="@style/stat_container">
+                    <!--increase-->
+                    <Button
+                        style="@style/basic_button.kill_button.pos"
+                        android:tag="kill,top,+" />
+
+                    <TextView
+                        android:id="@+id/top_kill"
+                        style="@style/counter_text" />
+                    <!--decrease-->
+                    <Button
+                        style="@style/basic_button.kill_button.neg"
+                        android:tag="kill,top,-" />
+                </LinearLayout>
+
+                <!--separator-->
+                <View
+                    style="@style/sep"
+                    android:layout_width="53dp" />
+
+                <!--Deaths-->
+                <LinearLayout style="@style/stat_container">
+
+                    <!--increase-->
+                    <Button
+                        style="@style/basic_button.death_button.pos"
+                        android:tag="death,top,+" />
+
+                    <TextView
+                        android:id="@+id/top_death"
+                        style="@style/counter_text" />
+
+                    <!--decrease-->
+                    <Button
+                        style="@style/basic_button.death_button.neg"
+                        android:tag="death,top,-" />
+                </LinearLayout>
+                <!--separator-->
+                <View style="@style/sep" />
+
+                <!--Assists-->
+                <LinearLayout style="@style/stat_container">
+
+                    <!--increase-->
+                    <Button
+                        style="@style/basic_button.assist_button.pos"
+                        android:tag="assist,top,+" />
+
+                    <TextView
+                        android:id="@+id/top_assist"
+                        style="@style/counter_text" />
+                    <!--decrease-->
+                    <Button
+                        style="@style/basic_button.assist_button.neg"
+                        android:tag="assist,top,-" />
+                </LinearLayout>
             </LinearLayout>
 
-            <!--separator-->
-            <TextView style="@style/sep"/>
+        </LinearLayout>
 
-            <!--Deaths-->
-            <LinearLayout style="@style/stat_container">
+        <!--bottom team-->
+        <LinearLayout
+            android:id="@+id/bottom_team"
+            style="@style/team_container.bottom">
+            <!--team name-->
+            <TextView
+                style="@style/team_name"
+                android:text="@string/bottom" />
+            <!--Score display-->
+            <LinearLayout style="@style/score_container">
+                <!--Kills-->
+                <LinearLayout style="@style/stat_container">
+                    <!--increase-->
+                    <Button
+                        style="@style/basic_button.kill_button.pos"
+                        android:tag="kill,bottom,+" />
 
-                <!--increase-->
-                <Button
-                    style="@style/basic_button.death_button.pos"
-                    android:tag="death,top,+"
-                    />
-                <TextView
-                    style="@style/counter_text"
-                    android:id="@+id/top_death"
-                    />
+                    <TextView
+                        android:id="@+id/bottom_kill"
+                        style="@style/counter_text" />
+                    <!--decrease-->
+                    <Button
+                        style="@style/basic_button.kill_button.neg"
+                        android:tag="kill,bottom,-" />
+                </LinearLayout>
 
-                <!--decrease-->
-                <Button
-                    style="@style/basic_button.death_button.neg"
-                    android:tag="death,top,-"
-                    />
+                <!--separator-->
+                <View style="@style/sep" />
+
+                <!--Deaths-->
+                <LinearLayout style="@style/stat_container">
+
+                    <!--increase-->
+                    <Button
+                        style="@style/basic_button.death_button.pos"
+                        android:tag="death,bottom,+" />
+
+                    <TextView
+                        android:id="@+id/bottom_death"
+                        style="@style/counter_text" />
+
+                    <!--decrease-->
+                    <Button
+                        style="@style/basic_button.death_button.neg"
+                        android:tag="death,bottom,-" />
+                </LinearLayout>
+                <!--separator-->
+                <View style="@style/sep" />
+
+                <!--Assists-->
+                <LinearLayout style="@style/stat_container">
+
+                    <!--increase-->
+                    <Button
+                        style="@style/basic_button.assist_button.pos"
+                        android:tag="assist,bottom,+" />
+
+                    <TextView
+                        android:id="@+id/bottom_assist"
+                        style="@style/counter_text" />
+                    <!--decrease-->
+                    <Button
+                        style="@style/basic_button.assist_button.neg"
+                        android:tag="assist,bottom,-" />
+                </LinearLayout>
             </LinearLayout>
-            <!--separator-->
-            <TextView style="@style/sep"/>
 
-            <!--Assists-->
-            <LinearLayout style="@style/stat_container">
 
-                <!--increase-->
-                <Button
-                    style="@style/basic_button.assist_button.pos"
-                    android:tag="assist,top,+"
-                    />
-                <TextView
-                    style="@style/counter_text"
-                    android:id="@+id/top_assist"
-                    />
-                <!--decrease-->
-                <Button
-                    style="@style/basic_button.assist_button.neg"
-                    android:tag="assist,top,-"
-                    />
-            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
 
-    <!--bottom team-->
-    <LinearLayout
-        style="@style/team_container.bottom"
-        android:id="@+id/bottom_team"
-        >
-        <!--team name-->
-        <TextView
-            style="@style/team_name"
-            android:text="@string/bottom"
-            />
-        <!--Score display-->
-        <LinearLayout style="@style/score_container">
-            <!--Kills-->
-            <LinearLayout style="@style/stat_container">
-                <!--increase-->
-                <Button
-                    style="@style/basic_button.kill_button.pos"
-                    android:tag="kill,bottom,+"
-                    />
-                <TextView
-                    style="@style/counter_text"
-                    android:id="@+id/bottom_kill"
-                    />
-                <!--decrease-->
-                <Button
-                    style="@style/basic_button.kill_button.neg"
-                    android:tag="kill,bottom,-"
-                    />
-            </LinearLayout>
-
-            <!--separator-->
-            <TextView style="@style/sep"/>
-
-            <!--Deaths-->
-            <LinearLayout style="@style/stat_container">
-
-                <!--increase-->
-                <Button
-                    style="@style/basic_button.death_button.pos"
-                    android:tag="death,bottom,+"
-                    />
-                <TextView
-                    style="@style/counter_text"
-                    android:id="@+id/bottom_death"
-                    />
-
-                <!--decrease-->
-                <Button
-                    style="@style/basic_button.death_button.neg"
-                    android:tag="death,bottom,-"
-                    />
-            </LinearLayout>
-            <!--separator-->
-            <TextView style="@style/sep"/>
-
-            <!--Assists-->
-            <LinearLayout style="@style/stat_container">
-
-                <!--increase-->
-                <Button
-                    style="@style/basic_button.assist_button.pos"
-                    android:tag="assist,bottom,+"
-                    />
-                <TextView
-                    style="@style/counter_text"
-                    android:id="@+id/bottom_assist"
-                    />
-                <!--decrease-->
-                <Button
-                    style="@style/basic_button.assist_button.neg"
-                    android:tag="assist,bottom,-"
-                    />
-            </LinearLayout>
-        </LinearLayout>
-
-        <Button style="@style/reset_button" />
-    </LinearLayout>
+    <Button style="@style/reset_button" />
 </RelativeLayout>

@@ -11,4 +11,7 @@
     <color name="killop">#fbe9e7</color>
     <color name="deathop">#fafafa</color>
     <color name="assistop">#e1f5fe</color>
+
+    <color name="top_team">#bddf4c4c</color>
+    <color name="bot_team">#d2243676</color>
 </resources>
